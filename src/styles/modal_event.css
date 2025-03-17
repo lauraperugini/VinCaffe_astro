@@ -1,0 +1,91 @@
+
+/* Event Modal1 styles */
+
+.date-time,
+.event-info {
+    color: #000;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.date-time {
+    font-size: 25px; /* 37.5px*/
+}
+
+.event-info {
+    font-size: 15px; /* 22.5px*/
+}
+
+.ikona-event-rezervace {
+    width: 350px;
+    height: 217px;
+    flex-shrink: 0;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.event-modal-content {
+    padding: 0 0 40px 0;
+}
+
+.event-close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.event-close-btn:hover,
+.event-close-btn:focus {
+    color: black;
+}
+
+/* Buttons */
+button,
+.event-yes,
+.event-no,
+.dikyacus {
+    display: inline-flex;
+    height: 46px;
+    padding: 17px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    border: none;
+}
+
+.event-yes {
+    background-color: #2A5B36;
+    color: white;
+}
+
+.event-yes:hover {
+    background: #3C8A4B;
+}
+
+.event-no,
+.dikyacus {
+    border: 1px solid #2A5B36;
+    background: white;
+    color: #2A5B36;
+}
+
+.event-no:hover,
+.dikyacus:hover {
+    background: #2A5B36;
+    color: white;
+}

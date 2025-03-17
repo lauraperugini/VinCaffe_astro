@@ -1,0 +1,587 @@
+/* Modal2 Styles */
+.occasion-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.occasion-modal-content {
+    position: relative;
+    background-color: white;
+    margin: 5% auto;
+    padding: 40px;
+    width: 960px;
+    height: 820px;
+    border-radius: 30px;
+    font-family: 'Jura', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.occasion-close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.occasion-close-btn:hover,
+.occasion-close-btn:focus {
+    color: black;
+}
+
+/* Buttons */
+button, .occasion-rezervuj, .occasion-zrusit, .occasion-dikyacus {
+    display: inline-flex;
+    height: 46px;
+    padding: 17px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    border: none;
+}
+
+.occasion-rezervuj {
+    background-color: #2A5B36;
+    color: white;
+}
+
+.occasion-rezervuj:hover {
+    background: #3C8A4B;
+}
+
+.occasion-zrusit, .occasion-dikyacus {
+    border: 1px solid #2A5B36;
+    background: white;
+    color: #2A5B36;
+}
+
+.occasion-rusit:hover, .dikyacus:hover {
+    background: #2A5B36;
+    color: white;
+}
+
+/* Layout */**
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.occasion-moreinfo {
+    display: flex;
+    width: 320px;
+    padding-top: 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/*fixes header*/
+
+.occasion-header {
+    width: 100%;
+    height: 83px;
+    flex-shrink: 0;
+    background-image: url('../assets/headers_backgrounds/thrift.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 30px; 
+    border-top-right-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; 
+    margin: 0; 
+}
+
+.occasion-modal-content {
+    padding: 0px 0px 40px 0px;
+}
+
+.occasion-header h2 {
+    color: #6F8FAF; 
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.occasion-header {
+    box-sizing: border-box;
+}
+
+/* Typography */
+
+
+h1, h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h2 {
+    color: #000;
+    text-align: center;
+    font-family: 'Special Elite';
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+
+/* Form Layout */**
+
+label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.occasion-form-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* Parent container */
+.occasion-columns {
+    display: flex;
+    gap: 40px;
+}
+
+label{
+    color: var(--CTA-2, #846B11);
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 37.5px */
+}
+
+/* Left Column */
+.occasion-left-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.occasion-howmany {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+}
+
+.occasion-people-input {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.occasion-people textarea {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #303F73;
+    border-radius: 10px;
+    padding: 12px 25px 8px 25px;
+    box-sizing: border-box;
+    text-align: center;
+    resize: none;
+
+    color: var(--CTA, #303F73);
+    font-family: "Josefin Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 28px */
+    
+    align-self: center;
+    margin: 0 auto;
+}
+
+.occasion-people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    width: 100%;
+}
+
+.occasion-people label {
+    text-align: center; 
+}
+
+#occasion-people {
+    width: 84px;
+    height: 48px;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 12px 25px 8px 25px;
+    box-sizing: border-box;
+}
+
+.occasion-people {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+.occasion-people label {
+    text-align: center;
+    display: block;
+}
+
+/*changes*/
+
+.occasion-people textarea {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #303F73;
+    border-radius: 10px;
+    padding: 12px 25px 8px 25px;
+    box-sizing: border-box;
+    text-align: center;
+    resize: none;
+    margin: 0 auto;
+}
+
+.occasion-people textarea::placeholder {
+    color: var(--CTA, #303e7393);
+    font-family: "Josefin Sans";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 28px */
+}
+
+/* Right Column */
+.occasion-right-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.occasion-additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.occasion-additional-info textarea::placeholder {
+    color: var(--CTA, #303e7393);
+    font-family: "Josefin Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 22.5px */
+}
+
+.occasion-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.occasion-contact-label {
+    color: #000;
+    font-family: "Work Sans";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 12px */
+}
+
+.occasion-additional-info textarea {
+    width: 320px;
+    height: 140px;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 16px;
+    box-sizing: border-box; 
+    resize: none;
+
+    color:#303F73;
+    font-family: "Josefin Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 22.5px */
+}
+
+.occasion-additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.occasion-ser-info input[type="text"],
+.occasion-user-info input[type="email"] {
+    width: 320px;
+    height: 48px;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 11px 16px;
+    box-sizing: border-box;
+}
+
+.occasion-user-info label {
+    margin-bottom: 4px;
+}
+
+.occasion-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+.text input,
+.email input {
+    display: flex;
+    width: 320px;
+    height: 48px;
+    padding: 11px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+    border: 1px solid #D6D9E3;
+    background: #FFF;   
+
+
+}
+
+.text input,
+.email input {
+    color: var(--CTA, #303F73);
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+}
+
+.occasion-chces {
+    color: var(--CTA-2, #846B11);
+
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 37.5px */
+
+    text-align: center;
+}
+
+.occasion-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 320px;
+}
+
+.occasion-input-wrapper input {
+    width: 100%;
+    height: 48px;
+    padding: 11px 16px;
+    padding-right: 40px; /* Space for the icon */
+    border-radius: 10px;
+    border: 1px solid #D6D9E3;
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    outline: none;
+}
+
+/* Borders */
+.occasion-error-border {
+    border-color: red;
+}
+
+.occasion-valid-border {
+    border-color: green;
+}
+
+/* Icons inside inputs */
+.occasion-validation-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    
+}
+
+/* Custom icons */
+.occasion-valid-icon {
+    background-image: url("icons/icon/Texfield/Logo/ok.svg");
+}
+
+.occasion-error-icon {
+    background-image: url("icons/icon/Text/Texfield/Logo/error.svg");
+}
+
+/* Error message */
+.occasion-error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/*shadows*/
+
+/* Error state */
+.occasion-error-border {
+    border-radius: 10px;
+    border: 1px solid #B82C00;
+    background: #FFF;
+    box-shadow: 0px 0px 5px 0px #B82C00;
+}
+
+/* Valid state */
+.occasion-valid-border {
+    border-radius: 10px;
+    border: 1px solid #396600;
+    background: #FFF;
+    box-shadow: 0px 0px 5px 0px rgba(57, 102, 0, 0.60);
+}
+
+.occasion-success-message {
+    color: #396600;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*autofill*/
+
+input::-webkit-contacts-auto-fill-button {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+input:-webkit-autofill {
+    background-color: transparent !important;
+    box-shadow: 0 0 0px 1000px white inset !important;
+    color: inherit !important;
+}
+
+/*try to center*/
+
+.occasion-right-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Centers - child elements */
+
+    margin-top: 10px;
+}
+
+.occasion-user-info,
+.occasion-additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 320px; 
+}
+
+.occasion-contact-label {
+    text-align: left;
+}
+
+.occasion-user-info input {
+    color: var(--CTA, #303F73);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+}
+
+/* Footer Buttons */
+.occasion-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.occasion-columns {
+    justify-content: center;
+}
+
+.occasion-left-column{
+    margin-top: 9px;
+}
+
+.occasion-header h2 {
+    color: #6F8FAF; 
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.occasion-left-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.occasion-howmany {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%; 
+    padding-left: 0;
+}
+
+#occasion-name {
+    width: 320px;
+    height: 48px; 
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 11px 16px;
+    box-sizing: border-box;
+    font-family: "Josefin Sans";
+    font-size: 14px;
+    outline: none;
+    border: 1px solid #D6D9E3; 
+}

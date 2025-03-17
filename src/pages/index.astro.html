@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css" /><link rel="stylesheet" href="../styles/stalemenu.css"/><link rel="stylesheet" href="../styles/modal_wine.css"/>
+    <link rel="stylesheet" href="../styles/modal_occasion.css"/><link rel="stylesheet" href="../styles/modal_event.css"/><link rel="stylesheet" href="../styles/modal_contact.css"/>
+    <link rel="stylesheet" href="../styles/modal3_wine.css"/><link rel="stylesheet" href="../styles/modal2_occasion.css"/><link rel="stylesheet" href="../styles/modal2_event.css"/>
+    <link rel="stylesheet" href="../styles/modal3_occasion.css"/><link rel="stylesheet" href="../styles/modal3_event.css"/>
+    <link rel="stylesheet" href="../styles/modal2_wine.css"/><link rel="stylesheet" href="../styles/modal2.css"/><link rel="stylesheet" href="../styles/modal.css"/>
+    <title>VinCaffé</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="mraky">
+            <img src="../assets/backgrounds/mraky-navbar/mraky_pokus2 1.png" alt="mraky1" class="mraky1">
+            <img src="../assets/backgrounds/mraky-navbar/cervanek-1 1.png" alt="mraky2" class="mraky2">
+            <img src="../assets/backgrounds/mraky-navbar/mraky_pokus2 4.png" alt="mraky3" class="mraky3">
+            <img src="../assets/backgrounds/mraky-navbar/mraky_pokus2 3.png" alt="mraky4" class="mraky4">
+        </div>
+    <div class="logo">
+        <a href="#home">
+            <img src="../assets/vectors/logo/VC_Vector.png" alt="Logo" class="logo-img">
+        </a>
+    </div>
+        <div class="topnav">
+            <a class= "menu" href="#weeklymenu">MENU</a>
+            <a class= "udalosti" href="#udalosti">UDÁLOSTÍ</a>
+            <a class= "kontakt" href="#kontakt">KONTAKT</a>
+            <a class= "onlinerezervace" href="#rezervace">ONLINE REZERVACE</a>
+        </div>
+    </div>
+
+<!-- Modal pop-up -->
+<div id="reservationModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+
+        <!-- Header title -->
+        <div class="header">
+            <h2>Online Rezervace</h2>
+        </div>
+
+        <form id="reservationForm" class="form-layout">
+            <div class="columns">
+
+                <!-- Left column -->
+                <div class="left-column">
+                    <div class="title">
+                        <a class="steps">1.</a>
+                        <label for="date">Vyber Datum</label>
+                    </div>
+                    <div class="date-upper">
+                        <div class="calendar-header">
+                            <button onclick="prevMonth()">
+                                <img src="../assets/icons/icon/left-arrow.svg" alt="Previous Month">
+                            </button>
+                            <span id="calendar-month-year"></span>
+                            <button onclick="nextMonth()">
+                                <img src="../assets/icons/icon/arrow/right-arrow.svg" alt="Next Month">
+                            </button>
+                        </div>
+                        <div class="calendar-days-header">
+                            <span>M</span>
+                            <span>T</span>
+                            <span>W</span>
+                            <span>T</span>
+                            <span>F</span>
+                            <span>S</span>
+                            <span>S</span>
+                        </div>
+                        
+                        <div class="calendar-days" id="calendar-days"></div>
+                        <div class="calendar-days" id="calendar-days"></div>
+                    </div>
+                    <div class="date-time-lower">
+                        <div class="time">
+                            <label for="time">Zapiš čas</label>
+                            <input type="time" id="time" name="time" required>
+                        </div>
+                        <div class="people">
+                            <a class="secondstep">2.</a>
+                            <label for="people">Kolik vás bude?</label>
+                            <textarea id="people" name="people" placeholder="0" required></textarea>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div class="right-column">
+                    <div class="additional-info">
+                        <a class="chces">Chceš nám něco upřesnit?</a>
+                        <label for="nepovinne" class="contact-label">Nepovinné</label>
+                        <textarea id="moreinfo" name="moreinfo" placeholder="You can write here some long text. You can write about anything you want. For example, how was your day, what did you have for lunch, or whom do you love."></textarea>
+                    </div>
+                    <div class="user-info">
+                        <a class="chces">Údaje o vás</a>
+                    
+                        <label for="name" class="contact-label">Rezervace na jméno</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="name" name="name" autocomplete="off" required>
+                            <div class="validation-icon"></div>
+                        </div>
+                    
+                        <label for="email" class="contact-label">E-mail</label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" name="email" autocomplete="off" required>
+                            <div class="validation-icon"></div>
+                        </div>
+                    
+                        <label for="phone" class="contact-label">Telefonní číslo</label>
+                        <div class="input-wrapper">
+                            <input type="text" id="phone" name="phone" autocomplete="off" required>
+                            <div class="validation-icon"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Footer & buttons -->
+            <div class="buttons">
+                <input type="submit" class="rezervuj" value="ODESLAT REZERVACI">
+                <input type="button" class="zrusit" value="ZRUŠIT" id="closeModalBtn">
+            </div>
+        </form>
+    </div>
+</div>
+
+  <!-- Modal2 - Confirmation Message -->
+<div id="confirmationModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div class="header">
+        <h2>Online Rezervace</h2>
+    </div>
+      <p class="sent-reservation">Rezervace byla odeslána, <br>
+        držíme Ti místo!</p>
+        <p class="wait-reservation">Potvrzení o vytvoření požadavku na <br>
+            rezervaci by Ti měla přijít do mailu. <br>
+            My skoukneme naše místa a hned <br>
+            jak budeme moct, ozveme se.</p>
+        <img src="../assets/vectors/things/zidlicka.png" alt="ušák" class="ikona-rezervace"/>
+      <button class="dikyacus" id="goBackBtn">DÍKY A ZAVŘÍT</button>
+    </div>
+  </div>
+
+  <!-- Modal pop-up kontakt-->
+
+  <!-- Modal - kontakt -->
+<div id="KontaktModal" class="kontakt-modal">
+    <div class="kontakt-modal-content">
+        <span class="kontakt-close-btn">&times;</span>
+
+        <!-- Header title -->
+        <div class="kontakt-header">
+            <h2></h2>
+        </div>
+
+        <form id="Kontakt-Form" class="kontakt-form-layout">
+            <div class="kontakt-columns">
+
+                <!-- Left column -->
+                <div class="kontakt-left-column">
+                    <div class="kontakt-info">
+                        <div class="oteviraci-doba">
+                            <h2>Otevírací doba</h2>
+                            <p>Pondělí - Sobota 9:00-23:00<br>
+                                Neděle 9:00-16:00
+                            </p>
+                        </div>
+                        <div class="kontakt-rezervace">
+                            <h2>Rezervace</h2>
+                            <p>+420775760951<br>
+                                info@vincaffe.cz
+                            </p>
+                        </div>
+                        <div class="rezervace-btn">
+                        <a class= "onlinerezervace" href="#rezervace">ONLINE REZERVACE</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Middle column -->
+                <div class="kontakt-middle-column">
+                    <div class="kontakt-map-info">
+                        <div class="map">
+                            <img src="../assets/photos/mapicka.png" alt="mapa" class="mapa-photo">
+                        </div>
+                        <div class="info">
+                            Blahníkova 3 <br>
+                            Praha 3, 130 00
+                        </div>
+                        <div class="info2">
+                            Tramvaje: 5, 9, 15, 26<br>
+                            Zastávka: Husinecká
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div class="qr-text">
+                    <p>
+                        Naskenuj si naši polohu <br>
+                        přímo do telefonu.
+                    </p>
+                </div>
+                <div class="qr">
+                    <img src="../assets/photos/VinCaffé Google Maps 2.svg" alt="qr-mapa" class="qr-mapa">
+                </div>
+            </div>
+
+            <!-- Footer & buttons -->
+            <div class="kontakt-buttons">
+                <input type="button" class="kontakt-zrusit" value="ZAVŘÍT" id="kontaktCloseModalBtn">
+            </div>
+        </form>
+    </div>
+</div>
+
+  <!-- Motto -->
+
+    <div class="motto">
+        <div class="text">
+        <p>“Náš život je káva, <br>
+            víno a Ty, každý host, <br>
+            který k nám zavítá.”<br>
+        </p>
+        </div>
+        <div class="people">
+            <img src="../assets/photos/Group 109.png" alt="group of people">
+        </div>
+    </div>
+
+    <!-- o nás -->
+    <div class="zelene">
+        <div class="vinarna">
+            <div class="textonas">
+                <h1 class="aboutus">O nás</h1>
+                <p class="jsme">Jsme malá rodinná kavárna. Jasně, tohle asi slýcháváte často, ale my opravdu jsme. Máma s dcerou a táta nám do toho taky dost kecá. I zaměstnanci se stali rovněž naší rodinou a to se celé odráží na přístupu k hostům. Prostě jako doma. Dáte si u nás super kafe, a to jak italské espresso, tak i filtr, na kterém točíme různé české i nečeské pražírny. Nabídku vín máme obrovskou a každý si přijde na své. Vše osobně vybíráme a dovážíme z různých koutů Evropy.</p>
+            </div>
+            <div class="fotkavin">
+                <img src="../assets/backgrounds/vinarna.png" alt="vinarna" class="vin">
+            </div>
+        </div>
+    </div>
+    
+    
+     <!-- představujeme -->
+     <div class="team-wrapper">
+        <img src="../assets/vectors/things/tree.png" alt="Tree" class="tree-bg">
+        <div class="predstava">
+            <h2 class="predstaveni">Představujeme tým VinCaffé</h2>
+        </div>
+        <div class="medailonky">
+            <div class="jirina">
+                <img src="../assets/vectors/people/jirina.png" alt="jirina" class="zorzeta">
+                <div class="jirinkatext">
+                    <div class="name-signature">
+                        <h3>Jiřina</h3>
+                        <img src="../assets/vectors/podpis/jirinapodpis.png" alt="podpisjiriny" class="zorzetapodpis">
+                    </div>
+                    <p class="jirinatext">Jiřina je vidět tak nějak všude 
+                        a nikde. Je to nejvyšší z nejvyšších a proto jí tu všichni posloucháme. Vymýšlí pro Vás hlavně italské dobroty a stará se nejvíc o tu nezábavnou část, a to je papírování.</p>
+                </div>
+            </div>
+            
+            <div class="karolina">
+                <img src="../assets/vectors/people/kaja.png" alt="karolina" class="kaja">
+                <div class="karolinatext">
+                    <div class="name-signature">
+                        <h3>Kája</h3>
+                        <img src="../assets/vectors/podpis/kaja.png" alt="podpiskaja" class="kajapodpis">
+                    </div>
+                    <p class="kajatext">Nejčastěji maká v kuchyni, ale občas i na baru. Je to druhá nejvyšší z nejvyšších a stará se o to, aby vše šlapalo jak má, i když občas to šlape jen po jedné noze. Miluje Asii a květiny, a proto se 
+                        u nás objevují i asijské recepty a všudypřítomné květiny.</p>
+                </div>
+            </div>
+            
+            <div class="martin">
+                <img src="../assets/vectors/people/martin_bez_colored 1.png" alt="Martin" class="martas">
+                <div class="martastext">
+                    <div class="name-signature">
+                        <h3>Martin</h3>
+                        <img src="../assets/vectors/podpis/kudrnac.png" alt="podpismartina" class="martinpodpis">
+                    </div>
+                    <p class="martintext">Našeho podniku. Jeho kudrnatou hřívu jen tak někdo nepřehlídne. Vína umí doporučit nejlée z nás všech a taky proto je má všechny na starost. Pokud se nevíte rady on Vám pomůže zajisté nejlépe.</p>
+                </div>
+            </div>
+            
+            <div class="hanka">
+                <img src="../assets/vectors/people/hana.png" alt="hanka" class="hana">
+                <div class="hanickatext">
+                    <div class="name-signature">
+                        <h3>Hanka</h3>
+                        <img src="../assets/vectors/podpis/Háňa/podpis.png" alt="podpishani" class="hanipodpis">
+                    </div>
+                    <p class="hankatext">Tu uvidíte nejčastěji vykukovat zezadu z kuchyně, možná ji i občas uslyšíte. Je to horká hlava, ale dělá ty nejlepší dorty a vaří pro Vás vždy s láskou tak, jako by to vařila pro svého milého.</p>
+                </div>
+            </div>  
+        </div>
+    </div>
+
+    <!-- zahrádka -->
+    <div class="zahrada">
+        <div class="zahradkacontainer">
+            <div class="textyzahradka">
+                <a class="zahradka">Zahrádka</a>
+                <p class="zahradkatext">Pokud to počasí jen dovolí, máme otevřenou <br>
+                    zahrádku, kde si můžete odpočinout pod <br>
+                    korunami našich krásných kaštanů a třeba si i <br> 
+                    něco ugrilovat. <br>
+                </p>
+            </div>
+            <div class="stolecek">
+                <img src="../assets/vectors/things/foto_zahradka.png" alt="zahradka" class="zahradkazidle">
+            </div>
+        </div>
+    </div>
+
+    <!-- vnitřní prostory -->
+
+    <div class="vnitrniprostory">
+        <div class="prostory">
+            <img src="../assets/vectors/things/zidle.png" alt="zidle" class="imgzidle">
+            <div class="text-container">
+                <a class="prostor">Vnitřní prostory</a>
+                <p class="prostorytext">Naše kavárna je středně veliká. Kolem <br> 
+                    35 míst uvnitř. Volit můžete mezi <br> 
+                    klasickým sezení, např. k jídlu nebo se <br> 
+                    vrtnout k našemu čtecímu stolku.<br> 
+                </p>
+            </div>
+        </div>
+    </div>
+
+<!-- Menu -->
+
+<div class="vina">
+    <div class="dort">
+        <div id="weeklymenu">
+            <h1 class="menu-h1">Menu</h1>
+            <p class="jidlo">
+                Jídlo vymýšlíme podle toho, co nám chutná a máme rádi. Já, dcera Kája, miluji Asii, a proto se u nás setkáte i s touto kuchyní. Máma Jiřina má ráda zase Itálii, takže míváme často i těstoviny nebo risotta.
+            </p>
+        </div>
+        <div class="fotkadort">
+            <img src="../assets/photos/dorticek.png" alt="dort" class="dort-menu">
+        </div>
+    </div>
+
+    <!-- Týdenní Menu -->
+    <div class="menu-container">
+        <div class="text-menu">
+            <p class="tydentext">
+                Týdenní menu 3. 3. - 7. 3. <br> od 12:00 do vyprodání
+            </p>
+
+            <div class="tyden">
+                <div class="pondeli">
+                    <h3 class="weekday">Pondělí</h3>
+                    <ul class="custom-bullets">
+                        <li>Bramborový krém s houbami</li>
+                        <li>Segedínský gulás s karlovarským knedlíkem</li>
+                        <li>Cuketové placicky se salátem z bulguru a zeleniny s jogurovým dipem</li>
+                    </ul>
+                </div>
+                <div class="utery">
+                    <h3 class="weekday">Úterý</h3>
+                    <ul class="custom-bullets">
+                        <li>Mrkvový krém se zázvorem a kokosovým mlékem</li>
+                        <li>Krütí massaman curry s jasmínovou rýzí</li>
+                        <li>Čočkový dhal s jasmínovou ryzi</li>
+                    </ul>
+                </div>
+                <div class="streda">
+                    <h3 class="weekday">Středa</h3>
+                    <ul class="custom-bullets">
+                        <li>Kurecí vyvar s celestynskymi nudlemi</li>
+                        <li>Pecené kurecí stehno s bramborami a bylinkovou nádivkou</li>
+                        <li>Kynuté knedliky plnené povidly se zakysanou smetanou, máslem a vlasskými orechy</li>
+                    </ul>
+                </div>
+                <div class="ctvrtek">
+                    <h3 class="weekday">Čtvrtek</h3>
+                    <ul class="custom-bullets">
+                        <li>Hráskový krém</li>
+                        <li>Pstruh lososovitý s cockou beluga a pecenoou zeleninou</li>
+                        <li>Obalovaný kveták s pazitkovými bramborami na másle a tatarkou</li>
+                    </ul>
+                </div>
+                <div class="patek">
+                    <h3 class="weekday">Pátek</h3>
+                    <ul class="custom-bullets">
+                        <li>Italská cocková polévka</li>
+                        <li>Domácí tagliatelle s boloñskou omáckou a sýrem Gran Moravia</li>
+                        <li>Zapecené brambory s karamelizovanou cibulkou a uzeným tofu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stálé Menu -->
+        <div class="stalemenu">
+            <img src="../assets/backgrounds/mraky-navbar/mraky_pokus2 2.png 2.png" alt="mraky" class="mraky-menu1">
+            <img src="../assets/backgrounds/mraky-navbar/mraky_pokus2 1.png 1.png" alt="mraky2" class="mraky-menu2">
+            <!--<img src="photos/menu/titlepage/backpage.jpg" alt="stálé menu">-->
+            <div class="logo-stale">
+                <a class="stale-menu"> Stálé menu</a>
+                <img src="../assets/vectors/logo/VC_Vector.png" alt="logo stale menu" class="logo-menu">
+            </div>
+        </div>
+    </div>
+    <div class="menu-button">
+        <a class="menu" href="stalemenu.html">OTEVŘÍ MENU</a>
+    </div>
+    <div class="pasta-img">
+        <img src="../assets/photos/pasta2.jpg" alt="pasta" class="pasta">
+    </div>    
+</div>
+
+<div class="kaves-conteiner">
+    <img src="../assets/icons/kaves.png" alt="zrnko" class="zrnko">
+</div>
+
+<div class="akce-conteiner">
+    <div class="akce">
+        <h2 class="akce-text">Pořádáme pro vás akce</h2>
+    </div>
+    <div class="akce-popis">
+        <p>
+            Pokud to počasí jen dovolí, máme otevřenou <br>
+            zahrádku, kde si můžete odpočinout,<br>
+            pod korunami našich krásných <br>
+            kaštanů a třeba si i něco ugrilovat.
+        </p>
+    </div>
+    <div id="udalosti" class="chystame">
+        <a class="chystame-text">Chystáme</a>
+    </div>
+    <div class="akce-mesic">
+        <div class="akce-column">
+            <p class="akce-dny">18. 5. 2025 19:00 - Degustace vín Baláž</p>
+            <p class="akce-dny">27. 6. 2025 18:00 - Slávky a ústřice</p>
+            <p class="akce-dny">10. 7. 2025 11:00 - Blešák</p>
+        </div>
+        <div class="button-column">
+            <div class="wine-podrobnosti-button">PODROBNOSTI A REZERVACE</div>
+            <div class="event-podrobnosti-button">PODROBNOSTI A REZERVACE</div>
+            <div class="occasion-podrobnosti-button">PODROBNOSTI A REZERVACE</div>
+        </div>
+    </div>
+    
+        <!-- <div class="akce-row">
+            <p class="akce-dny">10. 7. 2025 18:00 - Martinova Pártoška</p>
+            <div class="podrobnosti-button">PODROBNOSTI A REZERVACE</div>
+        </div> -->
+
+        <!-- Modal pop-up podrobnosti a rezervace 3x-->
+
+        <!-- Wine - Modal1 info -->
+<div id="wineInfoModal" class="wine-modal">
+    <div class="wine-modal-content">
+        <span class="wine-close-btn">&times;</span>
+        <div class="wine-header">
+            <h2>Degustace vín Baláž</h2>
+        </div>
+        <img src="../assets/photos/wine_photo.png" alt="wine" class="ikona-wine-rezervace"/>
+        <p class="date-time">18. 5. 2021<br>19:00</p>
+        <p class="wine-info">
+            Tentokrát bychom vám rádi představili Vinařství Baláž,<br>
+            jehož vína nás velice zaujala a máme je v naší stálé nabídce.<br>
+            Potřebujeme ale pomoci s výběrem, a kdo jiný by nám mohl poradit lépe<br>
+            než náš domácí sommelier Kudrnáč?<br>
+            Můžete se těšit na pečlivě vybrané vzorky, kterými vás provede Martin.<br>
+            Ten nás degustací osobně provede a prozradí nám vše o těchto vínech.<br>
+        </p>
+        <div class="wine-buttons">
+            <button class="wine-yes" id="wineReserveBtn">REZERVOVAT MÍSTA</button>
+            <button class="wine-no" id="wineNoBtn">ZRUŠIT</button>
+        </div>
+    </div>
+</div>
+
+<!-- Wine-Modal2 reservation -->
+<div id="wineReservationModal" class="wine-modal">
+    <div class="wine-modal-content">
+        <span class="wine-close-btn">&times;</span>
+
+        <!-- Header title -->
+        <div class="wine-header">
+            <h2>Degustace vín Baláž</h2>
+        </div>
+
+        <form id="wineReservationForm" class="wine-form-layout">
+            <div class="wine-columns">
+
+                <!-- Left column -->
+                <div class="wine-left-column">
+                    <div class="wine-howmany">
+                        <div class="wine-people">
+                            <label for="wine-people">Kolik vás bude?</label>
+                            <textarea id="wine-people" name="wine-people" placeholder="0" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div class="wine-right-column">
+                    <div class="wine-user-info">
+                        <a class="wine-chces">Údaje o vás</a>
+                    
+                        <label for="wine-name" class="wine-contact-label">Rezervace na jméno</label>
+                        <div class="wine-input-wrapper">
+                            <input type="text" id="wine-name" name="wine-name" autocomplete="off" required>
+                            <div class="wine-validation-icon"></div>
+                        </div>
+                    
+                        <label for="wine-email" class="wine-contact-label">E-mail</label>
+                        <div class="wine-input-wrapper">
+                            <input type="email" id="wine-email" name="wine-email" autocomplete="off" required>
+                            <div class="wine-validation-icon"></div>
+                        </div>
+                    
+                        <label for="wine-phone" class="wine-contact-label">Telefonní číslo</label>
+                        <div class="wine-input-wrapper">
+                            <input type="text" id="wine-phone" name="wine-phone" autocomplete="off" required>
+                            <div class="wine-validation-icon"></div>
+                        </div>
+                        <div class="wine-additional-info">
+                            <a class="wine-chces">Chceš nám něco upřesnit?</a>
+                            <label for="wine-moreinfo" class="wine-contact-label">Nepovinné</label>
+                            <textarea id="wine-moreinfo" name="wine-moreinfo" placeholder="W(h)ine as long as you need to."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer & buttons -->
+            <div class="wine-buttons">
+                <input type="submit" class="wine-rezervuj" value="ODESLAT REZERVACI">
+                <input type="button" class="wine-zrusit" value="ZRUŠIT" id="wineCloseModalBtn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal potvrzení wine-rezervaci -->
+
+<div id="wineconfirmationModal" class="wine-modal">
+    <div class="wine-modal-content">
+      <span class="wine-close-btn">&times;</span>
+      <div class="wine-header">
+        <h2>Degustace Vín Baláž</h2>
+    </div>
+      <p class="wine-sent-reservation">Rezervace byla odeslána, <br>
+        držíme Ti místo!</p>
+        <p class="wine-wait-reservation">Potvrzení o vytvoření požadavku na <br>
+            rezervaci by Ti měla přijít do mailu. <br>
+            My skoukneme naše místa a hned <br>
+            jak budeme moct, ozveme se.</p>
+        <img src="../assets/vectors/things/zidlicka.png" alt="ušák" class="ikona-rezervace"/>
+      <button class="wine-dikyacus" id="WinegoBackBtn">DÍKY A ZAVŘÍT</button>
+    </div>
+  </div>
+
+    <!-- Food-Event Modal -->
+
+<!-- Event - Modal1 info -->
+
+<div id="eventInfoModal" class="event-modal">
+    <div class="event-modal-content">
+        <span class="event-close-btn">&times;</span>
+        <div class="event-header">
+            <h2>Slávky a ústřice</h2>
+        </div>
+        <img src="../assets/photos/musle.jpg" alt="event" class="ikona-event-rezervace"/>
+        <p class="date-time">18. 2. 2025<br>18:30</p>
+        <p class="event-info">
+            Únor je tady a s ním i naše tradiční specialita!<br>
+
+            Ve VinCaffé pro vás opět připravujeme slávky a ústřice.<br>
+            Podávat budeme slávky na bílém víně, másle a bylinkách, doplněné naší domácí focacciou a česnekovo-bylinkovým máslem.<br>
+
+            📌 400g slávek – 290 Kč<br>
+            📌 Ústřice – 1 ks / 69 Kč<br>
+
+            K těmto delikatesám jsme pečlivě vybrali vína, která se k nim nejlépe hodí, a navíc otevřeme i lahve, které běžně nerozléváme.<br>
+
+            ⚠ Rezervace je nutná! Pokud máte zájem také o ústřice, dejte nám to prosím vědět předem.<br>
+            Přijít můžete kdykoliv v průběhu akce, jen nám prosím dejte vědět, že dorazíte. Těšíme se na vás! 😊<br>
+        </p>
+        <div class="event-buttons">
+            <button class="event-yes" id="eventReserveBtn">REZERVOVAT MÍSTA</button>
+            <button class="event-no" id="eventeNoBtn">ZRUŠIT</button>
+        </div>
+    </div>
+</div>
+
+<!-- Event  - Modal2 reservation -->
+
+<div id="eventReservationModal" class="event-modal">
+    <div class="event-modal-content">
+        <span class="event-close-btn">&times;</span>
+
+        <!-- Header title -->
+        <div class="event-header">
+            <h2>Slávky a ústřice</h2>
+        </div>
+
+        <form id="eventReservationForm" class="event-form-layout">
+            <div class="event-columns">
+
+                <!-- Left column -->
+                <div class="event-left-column">
+                    <div class="event-howmany">
+                        <div class="event-people">
+                            <label for="event-people">Kolik vás bude?</label>
+                            <textarea id="event-people" name="event-people" placeholder="0" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div class="event-right-column">
+                    <div class="event-user-info">
+                        <a class="event-chces">Údaje o vás</a>
+                    
+                        <label for="event-name" class="event-contact-label">Rezervace na jméno</label>
+                        <div class="event-input-wrapper">
+                            <input type="text" id="event-name" name="event-name" autocomplete="off" required>
+                            <div class="event-validation-icon"></div>
+                        </div>
+                    
+                        <label for="event-email" class="event-contact-label">E-mail</label>
+                        <div class="event-input-wrapper">
+                            <input type="email" id="event-email" name="event-email" autocomplete="off" required>
+                            <div class="event-validation-icon"></div>
+                        </div>
+                    
+                        <label for="event-phone" class="event-contact-label">Telefonní číslo</label>
+                        <div class="event-input-wrapper">
+                            <input type="text" id="event-phone" name="event-phone" autocomplete="off" required>
+                            <div class="event-validation-icon"></div>
+                        </div>
+                        <div class="event-additional-info">
+                            <a class="event-chces">Chceš nám něco upřesnit?</a>
+                            <label for="event-moreinfo" class="event-contact-label">Nepovinné</label>
+                            <textarea id="event-moreinfo" name="event-moreinfo" placeholder="A love letter to food."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer & buttons -->
+            <div class="event-buttons">
+                <input type="submit" class="event-rezervuj" value="ODESLAT REZERVACI">
+                <input type="button" class="event-zrusit" value="ZRUŠIT" id="eventCloseModalBtn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal3 potvrzení event-rezervaci -->
+
+<div id="eventconfirmationModal" class="event-modal">
+    <div class="event-modal-content">
+      <span class="event-close-btn">&times;</span>
+      <div class="event-header">
+        <h2>Slávky a ústřice</h2>
+    </div>
+      <p class="event-sent-reservation">Rezervace byla odeslána, <br>
+        držíme Ti místo!</p>
+        <p class="event-wait-reservation">Potvrzení o vytvoření požadavku na <br>
+            rezervaci by Ti měla přijít do mailu. <br>
+            My zkoukneme naše místa a hned <br>
+            jak budeme moct, ozveme se.</p>
+        <img src="../assets/vectors/things/zidlicka.png" alt="ušák" class="ikona-rezervace"/>
+      <button class="dikyacus" id="EventgoBackBtn">DÍKY A ZAVŘÍT</button>
+    </div>
+  </div>
+
+    <!-- Occasion Modal -->
+
+<!-- Occasion - Modal1 info -->
+<div id="occasionInfoModal" class="occasion-modal">
+    <div class="occasion-modal-content">
+        <span class="occasion-close-btn">&times;</span>
+        <div class="occasion-header">
+            <h2>Blešák</h2>
+        </div>
+        <img src="../assets/photos/Screenshot 2025-03-08 at 15.41.45.png" alt="event" class="ikona-occasion-rezervace"/>
+        <p class="date-time">20. 6. 2025<br>11:00</p>
+        <p class="occasion-info">
+            Blesák v zahradě je zpět!<br>
+
+            První blesák byl hit, tak proč si to nezopakovat? <br>
+            Čeká na vás spousta stylových kousků – oblečení, doplňky do bytu i rostliny. <br>
+            Přijďte nakupovat, okukovat nebo si jen užít drink či kávu. <br>
+            Těšíme se na vás!<br>
+            <br>
+            Chcete prodávat?<br>
+            Napište nám na info@vincaffe.cz 😊<br>
+        </p>
+        <div class="occasion-buttons">
+            <button class="occasion-yes" id="occasionReserveBtn">REZERVOVAT MÍSTA</button>
+            <button class="occasion-no" id="occasionNoBtn">ZRUŠIT</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Event-Modal2 reservation -->
+<div id="occasionReservationModal" class="occasion-modal">
+    <div class="occasion-modal-content">
+        <span class="occasion-close-btn">&times;</span>
+
+        <!-- Header title -->
+        <div class="occasion-header">
+            <h2>Blešák</h2>
+        </div>
+
+        <form id="occasionReservationForm" class="occasion-form-layout">
+            <div class="occasion-columns">
+
+                <!-- Left column -->
+                <div class="occasion-left-column">
+                    <div class="occasion-howmany">
+                        <div class="occasion-people">
+                            <label for="occasion-people">Kolik vás bude?</label>
+                            <textarea id="occasion-people" name="occasion-people" placeholder="0" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column -->
+                <div class="occasion-right-column">
+                    <div class="occasion-user-info">
+                        <a class="occasion-chces">Údaje o vás</a>
+                    
+                        <label for="occasion-name" class="occasion-contact-label">Rezervace na jméno</label>
+                        <div class="occasion-input-wrapper">
+                            <input type="text" id="occasion-name" name="occasion-name" autocomplete="off" required>
+                            <div class="occasion-validation-icon"></div>
+                        </div>
+                    
+                        <label for="occasion-email" class="occasion-contact-label">E-mail</label>
+                        <div class="occasion-input-wrapper">
+                            <input type="email" id="occasion-email" name="occasion-email" autocomplete="off" required>
+                            <div class="occasion-validation-icon"></div>
+                        </div>
+                    
+                        <label for="occasion-phone" class="occasion-contact-label">Telefonní číslo</label>
+                        <div class="occasion-input-wrapper">
+                            <input type="text" id="occasion-phone" name="occasion-phone" autocomplete="off" required>
+                            <div class="occasion-validation-icon"></div>
+                        </div>
+                        <div class="occasion-additional-info">
+                            <a class="occasion-chces">Chceš nám něco upřesnit?</a>
+                            <label for="occasion-moreinfo" class="occasion-contact-label">Nepovinné</label>
+                            <textarea id="occasion-moreinfo" name="occasion-moreinfo" placeholder="Suit yourself."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer & buttons -->
+            <div class="occasion-buttons">
+                <input type="submit" class="occasion-rezervuj" value="ODESLAT REZERVACI">
+                <input type="button" class="occasion-zrusit" value="ZRUŠIT" id="occasionCloseModalBtn">
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Modal3 potvrzení event-rezervaci -->
+
+<div id="occasionconfirmationModal" class="occasion-modal">
+    <div class="occasion-modal-content">
+      <span class="occasion-close-btn">&times;</span>
+      <div class="occasion-header">
+        <h2>Blešák</h2>
+    </div>
+      <p class="occasion-sent-reservation">Rezervace byla odeslána, <br>
+        držíme Ti místo!</p>
+        <p class="occasion-wait-reservation">Potvrzení o vytvoření požadavku na <br>
+            rezervaci by Ti měla přijít do mailu. <br>
+            My zkoukneme naše místa a hned <br>
+            jak budeme moct, ozveme se.</p>
+        <img src="../assets/vectors/things/zidlicka.png" alt="ušák" class="ikona-rezervace"/>
+      <button class="dikyacus" id="OccasiongoBackBtn">DÍKY A ZAVŘÍT</button>
+    </div>
+  </div>
+
+    <!-- footer -->
+
+<div class="footer">
+    <div class="poslednitexty">   
+    <div class="open">
+        <h3>Otevírací doba</h3>
+        <img src="../assets/vectors/things/Vector_kava.png" alt="zrnko" class="zrnko">
+        <ul>
+            <li>Pondělí - sobota 9.00 - 23.00</li>
+            <li>Neděle 9.00 - 16.00</li> 
+        </ul>
+    </div>
+
+    <div class="address">
+        <h3>Adresa</h3>
+        <img src="../assets/vectors/things/Vector_kava.png" alt="zrnko" class="zrnko">
+        <ul>
+            <li>Blahníkova 3 Praha 3,<br>
+                130 00</li>
+            <li>Tramvaje: 5, 9, 15, 26 </li> 
+            <li>Zastávka: Viktoria Žižkov</li> 
+        </ul>
+    </div>
+
+    <div class="re">
+        <h3>Rezervace</h3>
+        <img src="../assets/vectors/things/Vector_kava.png" alt="zrnko" class="zrnko">
+        <ul>
+            <li>+420775760951</li>
+            <li>info@vincaffe.cz</li> 
+        </ul>
+    </div>
+
+    <div class="socials">
+        <h3>Sledujte nás</h3>
+        <div class="social-links">
+            <a href="https://www.instagram.com/vincaffe/" target="_blank" class="instagram">
+                <img src="../assets/vectors/socials/IG_vector.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/vincaffe1/?locale=cs_CZ" target="_blank" class="facebook">
+                <img src="../assets/vectors/socials/FB_vect.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+</div>
+<script src="../scripts/event_reservation.js"></script>
+<script src="../scripts/kontakt.js"></script>
+<script src="../scripts/occasion.js"></script>
+<script src="../scripts/rezervace.js"></script>
+<script src="../scripts/stalemenu.js"></script>
+<script src="../scripts/wine_reservation.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* Wine Modal Styles */
+.date-time,
+.wine-info {
+    color: #000;
+    text-align: center;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.date-time {
+    font-size: 25px; /* 37.5px*/
+}
+
+.wine-info {
+    font-size: 15px; /* 22.5px*/
+}
+
+.ikona-wine-rezervace {
+    width: 350px;
+    height: 217px;
+    flex-shrink: 0;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.wine-modal-content {
+    padding: 0 0 40px 0;
+}
+
+.wine-close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.wine-close-btn:hover,
+.wine-close-btn:focus {
+    color: black;
+}
+
+/* Buttons */
+button,
+.wine-yes,
+.wine-no,
+.dikyacus {
+    display: inline-flex;
+    height: 46px;
+    padding: 17px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    border: none;
+}
+
+.wine-yes {
+    background-color: #2A5B36;
+    color: white;
+}
+
+.wine-yes:hover {
+    background: #3C8A4B;
+}
+
+.wine-no,
+.dikyacus {
+    border: 1px solid #2A5B36;
+    background: white;
+    color: #2A5B36;
+}
+
+.wine-no:hover,
+.dikyacus:hover {
+    background: #2A5B36;
+    color: white;
+}

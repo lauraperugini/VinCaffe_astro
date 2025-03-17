@@ -1,0 +1,77 @@
+/*Modal3 style*/
+
+.occasion-sent-reservation{
+    color: #000;
+    text-align: center;
+
+    font-family: "Josefin Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 37.5px */
+}
+
+.occasion-wait-reservation{
+    color: #000;
+    text-align: center;
+
+    font-family: "Josefin Sans";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 22.5px */
+}
+
+.ikona-rezervace{
+    width: 169.108px;
+    height: 193.687px;
+    flex-shrink: 0;
+}
+
+/*fixes header*/
+
+.occasion-header {
+    width: 100%;
+    height: 83px;
+    background-image: url('../assets/headers_backgrounds/thrift.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 30px; 
+    border-top-right-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; 
+    margin: 0; 
+}
+
+.occasion-modal-content {
+    padding: 0px 0px 40px 0px;
+}
+
+.occasion-header {
+    box-sizing: border-box;
+}
+
+.occasion-header h2 {
+    color: #6F8FAF; 
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.ikona-rezervace{
+    justify-content: center;
+}
+
+
+.ikona-rezervace {
+    width: 169.108px;
+    height: 193.687px;
+    flex-shrink: 0;
+    display: block;
+    margin: 0 auto;
+}
