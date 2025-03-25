@@ -34,7 +34,7 @@ html, body {
     display: block;
 }
 
-.mraky1 {
+.mraky1, .mraky2, .mraky3, .mraky4 {
     width: 201px;
     height: 85px;
     margin-right: 121px;
@@ -86,10 +86,7 @@ html, body {
     font-size: 14px;
 }
 
-.menu,
-.udalosti,
-.kontakt,
-.onlinerezervace {
+.menu, .udalosti, .kontakt, .onlinerezervace {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +96,6 @@ html, body {
     margin: 0 12px;
     font-family: "Josefin Sans";
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 100%;
     letter-spacing: 0.7px;
@@ -112,8 +108,7 @@ html, body {
     color: #212A49;
 }
 
-.udalosti,
-.kontakt {
+.udalosti, .kontakt {
     width: 105px;
     height: 46px;
     border: 1px solid #2A5B36;
@@ -155,7 +150,6 @@ html, body {
 .text p {
     color: #846B11;
     font-size: 40px;
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
     letter-spacing: 2px;
@@ -205,8 +199,7 @@ html, body {
     margin-left: 746px;
 }
 
-.aboutus,
-.jsme {
+.aboutus, .jsme {
     color: #000;
     margin-left: 100px;
     margin-top: 30px;
@@ -216,16 +209,12 @@ html, body {
 .aboutus {
     font-family: "Special Elite", serif;
     font-size: 33px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 39.6px;
 }
 
 .jsme {
     font-family: "Josefin Sans", sans-serif;
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 22.5px;
 }
 
@@ -271,8 +260,6 @@ html, body {
 .predstaveni {
     font-family: "Special Elite", serif;
     font-size: 45px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 54px;
     letter-spacing: 2.25px;
     color: #846B11;
@@ -322,10 +309,7 @@ html, body {
     max-width: 300px;
 }
 
-.zorzetapodpis,
-.kajapodpis,
-.martinpodpis,
-.hanipodpis {
+.zorzetapodpis, .kajapodpis, .martinpodpis, .hanipodpis {
     position: absolute;
     bottom: -5px;
     width: auto;
@@ -381,7 +365,6 @@ html, body {
     color: var(--Text-body, #310900);
     text-align: center;
     font-size: 25px;
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
 }
@@ -423,7 +406,6 @@ html, body {
     color: var(--Text-body, #310900);
     text-align: center;
     font-size: 25px;
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
     margin-left: 120px;
@@ -484,8 +466,6 @@ html, body {
     color: #000;
     font-family: "Special Elite", serif;
     font-size: 33px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 39.6px;
     margin: 0 0 15px 0;
     text-align: left;
@@ -495,8 +475,6 @@ html, body {
     color: #000;
     font-family: "Josefin Sans", sans-serif;
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 22.5px;
     margin: 0;
     text-align: justify;
@@ -539,7 +517,7 @@ html, body {
 .tydentext {
     color: #000;
     text-align: center;
-    font-family: "Special Elite", serif;
+    font-family: "Special Elite";
     font-size: 24px;
     font-weight: 400;
     line-height: 28.8px;
@@ -563,6 +541,12 @@ html, body {
     margin-top: 20px;
 }
 
+.weekday{
+    color: #000;
+    font-family: "Special Elite", serif;
+    font-size: 18px;
+}
+
 .tyden > div {
     width: calc(50% - 10px);
     margin: 0;
@@ -583,8 +567,6 @@ html, body {
     color: #000;
     font-family: "Josefin Sans";
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
     line-height: 150%;
 }
 
@@ -603,11 +585,11 @@ html, body {
 }
 
 .custom-bullets li:nth-child(2)::before {
-    background-image: url('../assets/icons/menu/titlepage/vege_icon.png');
+    background-image: url('../assets/icons/menu/titlepage/icon.png');
 }
 
 .custom-bullets li:nth-child(3)::before {
-    background-image: url('../assets/icons/menu/titlepage/icon.png');
+    background-image: url('../assets/icons/menu/titlepage/vege_icon.png');
 }
 
 .menu-container {
@@ -686,7 +668,6 @@ html, body {
     color: #000;
     font-family: "Jura", serif;
     font-size: 24px;
-    font-style: normal;
     font-weight: 700;
     line-height: 100%;
 }
@@ -735,7 +716,6 @@ html, body {
     text-align: center;
     font-family: "Special Elite";
     font-size: 45px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%;
     letter-spacing: 2.25px;
@@ -747,7 +727,6 @@ html, body {
     text-align: center;
     font-family: "Josefin Sans", sans-serif;
     font-size: 25px;
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
 }
@@ -757,7 +736,6 @@ html, body {
     text-align: center;
     font-family: "Special Elite";
     font-size: 33px;
-    font-style: normal;
     font-weight: 400;
     line-height: 120%;
     margin-top: 0;
@@ -766,83 +744,9 @@ html, body {
 
 .akce-mesic {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-right: 180px;
-    margin-bottom: 156px;
-}
-
-.akce-row {
-    display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.akce-dny {
-    color: #000;
-    font-family: "Josefin Sans";
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
-    margin: 0;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.podrobnosti-button,
-.wine-podrobnosti-button,
-.event-podrobnosti-button,
-.occasion-podrobnosti-button {
-    display: flex;
-    height: 46px;
-    width: 258px;
-    padding: 17px 16px 15px 16px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    border: 1px solid #2A5B36;
-    background: #FFF;
-    color: #2A5B36;
-    text-align: center;
-    font-family: "Josefin Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 100%;
-    letter-spacing: 0.7px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    flex-shrink: 0;
-}
-
-.podrobnosti-button:hover,
-.wine-podrobnosti-button:hover,
-.event-podrobnosti-button:hover,
-.occasion-podrobnosti-button:hover {
-    background: #2A5B36;
-    color: #FFF;
-}
-
-.kaves-conteiner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-    margin-top: 72px;
-    margin-bottom: 72px;
-}
-
-/*fixes*/
-
-.akce-mesic {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-    gap: 0; 
+    gap: 0;
     margin-right: 180px;
     margin-bottom: 156px;
 }
@@ -850,25 +754,24 @@ html, body {
 .akce-column, .button-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
-    gap: 15px; 
-    align-items: center; 
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
 }
 
 .akce-dny {
     color: #000;
     font-family: "Josefin Sans";
     font-size: 25px;
-    font-style: normal;
     font-weight: 400;
     line-height: 150%;
     margin: 0;
     text-align: center;
     white-space: nowrap;
-    height: 46px; 
+    height: 46px;
     display: flex;
-    align-items: center; 
-    text-align: left; 
+    align-items: center;
+    text-align: left;
 }
 
 .podrobnosti-button,
@@ -889,7 +792,6 @@ html, body {
     text-align: center;
     font-family: "Josefin Sans";
     font-size: 14px;
-    font-style: normal;
     font-weight: 700;
     line-height: 100%;
     letter-spacing: 0.7px;
@@ -908,8 +810,14 @@ html, body {
     color: #FFF;
 }
 
-
-
+.kaves-conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-top: 72px;
+    margin-bottom: 72px;
+}
 
 /* FOOTER */
 .footer {
